@@ -9,7 +9,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const token = useSelector((state) => state.token);
 
   const getPosts = async () => {
-    const response = await fetch("http://localhost:3001/post", {
+    const response = await fetch("https://socialfullstack-og3i.onrender.com/post", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -19,7 +19,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   const getUserPosts = async () => {
     const response = await fetch(
-      `http://localhost:3001/post/${userId}/posts`,
+      `https://socialfullstack-og3i.onrender.com/post/${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
